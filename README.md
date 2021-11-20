@@ -1,3 +1,3 @@
-## Forms
+## Form
 
-Client-side forms and form validation practice.
+Client-side form and form validation practice.
