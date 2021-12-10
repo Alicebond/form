@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Form</title>
   </head>
   <body>
     <div class="container">
       <form action="" class="form">
         <h2>Information</h2>
+        <p>Required fields are labeled with "*".</p>
         <ul>
           <li class="email">
-            <label for="mail"> Email:</label>
+            <label for="mail">Email*:</label>
             <input
               name="mail"
               id="mail"
@@ -22,22 +23,43 @@
               placeholder="example@example.com"
             />
             <span class="error" aria-live="polite"></span>
+            <span></span>
           </li>
           <li class="country">
             <label for="country"> Country: </label>
-            <input name="country" id="country" type="text" />
+            <input type="country" name="country" id="country" />
+            <span></span>
           </li>
           <li class="zipcode">
             <label for="zip">ZipCode: </label>
             <input name="zipcode" id="zip" type="text" />
+            <span></span>
           </li>
           <li class="password">
-            <label for="password">Password: </label>
-            <input name="password" id="password" type="password" required />
+            <label for="password">Password*: </label>
+            <input
+              name="password"
+              id="password"
+              type="password"
+              minlength="8"
+              placeholder="At least 8 letters"
+              required
+            />
+            <span></span>
+            <span class="error" aria-live="polite"></span>
           </li>
           <li class="confirm">
-            <label for="confirm">Confirm password: </label>
-            <input name="confirm" id="confirm" type="password" required />
+            <label for="confirm">Confirm password*: </label>
+            <input
+              name="confirm"
+              id="confirm"
+              type="password"
+              minlength="8"
+              placeholder="At least 8 letters"
+              required
+            />
+            <span id="indicator"></span>
+            <span class="error" aria-live="polite"></span>
           </li>
           <li class="button"><button type="submit">Submit</button></li>
         </ul>
